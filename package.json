@@ -25,6 +25,7 @@
   "homepage": "https://github.com/osman230/deep-thoughts#readme",
   "dependencies": {
     "apollo-server-express": "^3.6.2",
+    "express": "^4.17.2",
     "graphql": "^16.2.0"
   }
 }
