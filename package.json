@@ -23,7 +23,6 @@
   "bugs": {
     "url": "https://github.com/osman230/deep-thoughts/issues"
   },
-  "homepage": "https://github.com/osman230/deep-thoughts#readme",
   "dependencies": {
     "apollo-server-express": "^3.6.2",
     "bootstrap": "^4.6.0",
