@@ -19,7 +19,7 @@ const typeDefs = gql`
   }
 
   type bookToSave {
-    BookId: string
+    BookId: String
     authors: [String]
     description: String
     title: String
