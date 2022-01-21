@@ -4,10 +4,10 @@ import Auth from '../utils/auth';
 import { removeBookId } from '../utils/localStorage';
 import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_ME } from '../utils/queries';
-import { DELETE_BOOK } from '../utils/mutations';
+import { REMOVE_BOOK } from '../utils/mutations';
 
 const SavedBooks = () => {
-  const [deleteBook, { error }] = useMutation({DELETE_BOOK});
+  const [removeBook, { error }] = useMutation({REMOVE_BOOK});
   const { loading, data } = useQuery(QUERY_ME);
   const userData = data?.me || {};
 
@@ -20,7 +20,7 @@ const SavedBooks = () => {
     }
 
     try {
-      const { data } = await deleteBook({ variables: { bookId }});
+      const { data } = await removeBook({ variables: { bookId }});
 
       if (error) {
         throw new Error('something went wrong!');
