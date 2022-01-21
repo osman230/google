@@ -22,7 +22,7 @@ const loggedIn = Auth.loggedIn();
       <div className="col-12 mb-3">
         <ThoughtForm />
       </div>
-    )}q
+    )}
   <div className={`col-12 mb-3 ${loggedIn && 'col-lg-8'}`}>
   {loading ? (
     <div>Loading...</div>
