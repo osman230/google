@@ -25,8 +25,8 @@ const LoginForm = () => {
     event.preventDefault();
 
     try {
-      const { data } = await login({
-        variables: { ...formState },
+      const { data } = await loginUser({
+        variables: { ...userformData },
       });
 
       Auth.login(data.login.token);
@@ -35,7 +35,7 @@ const LoginForm = () => {
     }
 
     // clear form values
-    setFormState({
+    setUserFormData({
       email: '',
       password: '',
     });
