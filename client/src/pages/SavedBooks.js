@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, CardColumns, Card, Button } from 'react-bootstrap';
+import { Container, Card, Button } from 'react-bootstrap';
 import Auth from '../utils/auth';
 import { removeBookId } from '../utils/localStorage';
 import { useQuery, useMutation } from '@apollo/client';
@@ -48,7 +48,7 @@ const SavedBooks = () => {
             ? `Viewing ${userData.savedBooks.length} saved ${userData.savedBooks.length === 1 ? 'book' : 'books'}:`
             : 'You have no saved books!'}
         </h2>
-        <CardColumns>
+        <Card style={{ width: '18rem' }}>
           {userData.savedBooks.map((book) => {
             return (
               <Card key={book.bookId} border='dark'>
@@ -64,7 +64,7 @@ const SavedBooks = () => {
               </Card>
             );
           })}
-        </CardColumns>
+        </Card>
       </Container>
     </>
   );

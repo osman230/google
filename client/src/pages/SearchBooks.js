@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Col, Form, Button, Card, CardColumns } from 'react-bootstrap';
+import { Container, Col, Form, Button, Card} from 'react-bootstrap';
 import { useMutation } from '@apollo/client';
 import { SAVE_BOOK } from '../utils/mutations';
 import Auth from '../utils/auth';
@@ -112,7 +112,7 @@ const SearchBooks = () => {
             ? `Viewing ${searchedBooks.length} results:`
             : 'Search for a book to begin'}
         </h2>
-        <CardColumns>
+        <Card style={{ width: '18rem' }}>
           {searchedBooks.map((book) => {
             return (
               <Card key={book.bookId} border='dark'>
@@ -137,7 +137,7 @@ const SearchBooks = () => {
               </Card>
             );
           })}
-        </CardColumns>
+        </Card>
       </Container>
     </>
   );
